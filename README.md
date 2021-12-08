@@ -60,4 +60,27 @@ Write basic profile information to IDX for the logged in user.
 async setIdxProfile(profile: BasicProfile): Promise<void>
 ```
 
+# Recommended hive and ceramic hosts
+
+Here are some recommended hosts
+
+## Hive
+
+https://api.hive.blog
+https://api.hivekings.com
+https://anyx.io
+https://api.openhive.network
+
+## Ceramic
+
+### Mainnet
+
+Ceramic mainnet is live but not currently available to all users.  Check for updates here https://developers.ceramic.network/learn/welcome/.
+
+### Testnet
+
+While mainnet is becoming available, the ceramic clay testnet is:
+
+https://ceramic-clay.3boxlabs.com
+
 

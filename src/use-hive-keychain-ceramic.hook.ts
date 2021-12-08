@@ -4,10 +4,7 @@ import { HiveKeychainCeramicConnector } from './hive-keychain-ceramic.connector'
 
 const InnerConnectorAtom = atom<HiveKeychainCeramicConnector | null>(null)
 
-export function useHiveKeychainCeramic(
-  ceramicHost: string = CERAMIC_HOST,
-  hiveHosts: string[] = HIVE_HOSTS,
-) {
+export function useHiveKeychainCeramic(ceramicHost: string, hiveHosts: string[]) {
   const [instance, setInstance] = useAtom(InnerConnectorAtom)
 
   if (!instance) {
