@@ -1,0 +1,32 @@
+{
+  "name": "@spknetwork/hive-keychain-ceramic",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist",
+    "prepublish": "npm run clean && npm run build",
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "lint:fix": "eslint --fix \"src/**/*.{ts,tsx}\"",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "test:report": "sensible-browser ./coverage/lcov-report/index.html",
+    "test": "jest --coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "3id-did-provider": "^1.1.1",
+    "@ceramicnetwork/3id-did-resolver": "^1.4.9",
+    "@ceramicnetwork/http-client": "^1.5.0",
+    "@ceramicstudio/idx": "^0.12.2",
+    "@ceramicstudio/idx-constants": "^1.0.0",
+    "@hiveio/dhive": "^1.1.1",
+    "@stablelib/sha256": "^1.0.1",
+    "dids": "^2.4.2"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.2"
+  }
+}
