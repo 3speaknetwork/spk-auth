@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "A library for authenticating with ceramic using Hive Keychain and interacting with IDX for user profile data.",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "build": "pnpm recursive run build",
     "clean:dist": "pnpm recursive exec -- rm -rf dist",
     "clean:node_modules": "pnpm recursive exec -- rm -rf node_modules; rm shrinkwrap.yaml; rm -rf node_modules",
