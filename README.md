@@ -1,3 +1,7 @@
-# SPK Auth React
+# SPK Auth
 
-A library for authenticating with ceramic using Hive Keychain and interacting with IDX for user profile data.
+PNPM Monorepo for spk auth packages
+
+# Developing
+
+See PNPM [workspaces guide](https://pnpm.io/workspaces)
