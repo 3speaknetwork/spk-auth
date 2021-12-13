@@ -5,8 +5,32 @@ importers:
   .:
     specifiers:
       '@changesets/cli': ^2.18.1
+      '@types/jest': ^27.0.3
+      '@typescript-eslint/eslint-plugin': ^5.4.0
+      '@typescript-eslint/parser': ^5.4.0
+      eslint: ^8.3.0
+      eslint-config-prettier: ^8.3.0
+      eslint-plugin-prettier: ^4.0.0
+      jest: ^27.3.1
+      prettier: ^2.5.0
+      ts-jest: ^27.0.7
+      ts-node: ^10.4.0
+      ts-node-dev: ^1.1.8
+      typescript: ^4.5.2
     devDependencies:
       '@changesets/cli': 2.18.1
+      '@types/jest': 27.0.3
+      '@typescript-eslint/eslint-plugin': 5.6.0_16d83f5c41c3abb1061a82b07c18e4f3
+      '@typescript-eslint/parser': 5.6.0_eslint@8.4.1+typescript@4.5.2
+      eslint: 8.4.1
+      eslint-config-prettier: 8.3.0_eslint@8.4.1
+      eslint-plugin-prettier: 4.0.0_90bd2ba582f6d1348d73031482d782e2
+      jest: 27.4.3_ts-node@10.4.0
+      prettier: 2.5.1
+      ts-jest: 27.1.1_d967a5c71b36617f9eaef12c091f7695
+      ts-node: 10.4.0_typescript@4.5.2
+      ts-node-dev: 1.1.8_typescript@4.5.2
+      typescript: 4.5.2
 
   packages/auth-react:
     specifiers:
@@ -17,22 +41,9 @@ importers:
       '@hiveio/dhive': ^1.1.1
       '@spknetwork/hive-keychain-ceramic': workspace:*
       '@stablelib/sha256': ^1.0.1
-      '@types/jest': ^27.0.3
-      '@typescript-eslint/eslint-plugin': ^5.4.0
-      '@typescript-eslint/parser': ^5.4.0
       3id-did-provider: ^1.1.1
       dids: ^2.4.2
-      eslint: ^8.3.0
-      eslint-config-prettier: ^8.3.0
-      eslint-plugin-prettier: ^4.0.0
-      jest: ^27.3.1
       jotai: ^1.4.5
-      prettier: ^2.5.0
-      rimraf: ^3.0.2
-      ts-jest: ^27.0.7
-      ts-node: ^10.4.0
-      ts-node-dev: ^1.1.8
-      typescript: ^4.5.2
     dependencies:
       '@ceramicnetwork/3id-did-resolver': 1.4.10
       '@ceramicnetwork/http-client': 1.5.1
@@ -44,20 +55,6 @@ importers:
       3id-did-provider: 1.1.1
       dids: 2.4.3
       jotai: 1.4.7
-    devDependencies:
-      '@types/jest': 27.0.3
-      '@typescript-eslint/eslint-plugin': 5.6.0_16d83f5c41c3abb1061a82b07c18e4f3
-      '@typescript-eslint/parser': 5.6.0_eslint@8.4.1+typescript@4.5.2
-      eslint: 8.4.1
-      eslint-config-prettier: 8.3.0_eslint@8.4.1
-      eslint-plugin-prettier: 4.0.0_90bd2ba582f6d1348d73031482d782e2
-      jest: 27.4.3_ts-node@10.4.0
-      prettier: 2.5.1
-      rimraf: 3.0.2
-      ts-jest: 27.1.1_d967a5c71b36617f9eaef12c091f7695
-      ts-node: 10.4.0_typescript@4.5.2
-      ts-node-dev: 1.1.8_typescript@4.5.2
-      typescript: 4.5.2
 
   packages/hive-keychain-ceramic:
     specifiers:

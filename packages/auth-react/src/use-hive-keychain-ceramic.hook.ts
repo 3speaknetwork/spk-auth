@@ -1,9 +1,16 @@
 import { atom, useAtom } from 'jotai'
-import { HiveKeychainCeramicConnector } from '@spknetwork/hive-keychain-ceramic'
+import {
+  DEFAULT_CERAMIC_HOST,
+  DEFAULT_HIVE_HOSTS,
+  HiveKeychainCeramicConnector,
+} from '@spknetwork/hive-keychain-ceramic'
 
 const InnerConnectorAtom = atom<HiveKeychainCeramicConnector | null>(null)
 
-export function useHiveKeychainCeramic(ceramicHost: string, hiveHosts: string[]) {
+export function useHiveKeychainCeramic(
+  ceramicHost: string = DEFAULT_CERAMIC_HOST,
+  hiveHosts: string[] = DEFAULT_HIVE_HOSTS,
+) {
   const [instance, setInstance] = useAtom(InnerConnectorAtom)
 
   if (!instance) {
