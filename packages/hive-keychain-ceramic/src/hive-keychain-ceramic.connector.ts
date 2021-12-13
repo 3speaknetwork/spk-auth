@@ -6,8 +6,8 @@ import { BasicProfile } from '@ceramicstudio/idx-constants'
 import { Client as DHiveClient } from '@hiveio/dhive'
 import { hash } from '@stablelib/sha256'
 import { DID } from 'dids'
-import { HiveSignResponse } from '.'
-import { CERAMIC_HOST, HIVE_HOSTS } from './constants'
+import { DEFAULT_HIVE_SIGNING_MESSAGE, HiveSignResponse } from '.'
+import { DEFAULT_CERAMIC_HOST, DEFAULT_HIVE_HOSTS } from './constants'
 import { getPermission } from './get-permission.function'
 
 function normalizeAuthSecret(authSecret64: Uint8Array) {
@@ -25,7 +25,10 @@ export class HiveKeychainCeramicConnector {
   idx: IDX
   loggedIn = false
 
-  constructor(ceramicHost: string = CERAMIC_HOST, hiveHosts: string[] = HIVE_HOSTS) {
+  constructor(
+    ceramicHost: string = DEFAULT_CERAMIC_HOST,
+    hiveHosts: string[] = DEFAULT_HIVE_HOSTS,
+  ) {
     this.DHive = new DHiveClient(hiveHosts)
     this.ceramic = new CeramicClient(ceramicHost)
     this.idx = new IDX({ ceramic: this.ceramic, autopin: true })
@@ -97,7 +100,7 @@ export class HiveKeychainCeramicConnector {
     const loginResult = await new Promise<HiveSignResponse>((resolve, reject) => {
       window.hive_keychain?.requestSignBuffer(
         undefined,
-        'Allow this account to control your identity',
+        DEFAULT_HIVE_SIGNING_MESSAGE,
         'Posting',
         (res: HiveSignResponse) => {
           if (res.success) {
