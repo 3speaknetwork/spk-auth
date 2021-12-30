@@ -22,6 +22,10 @@ The secret is cached in local storage and re-used on browser refreshes until the
 async login(): Promise<CeramicClient>
 ```
 
+### Recording a user's `did` to its `posting_json_metadata` 
+
+The first time a user authenticates with ceramic using Hive, the ceramic `did` (distributed identity) ID is written to the user's `posting_json_metadata` `did` attribute in their hive account.
+
 ## Logout
 
 Remove the ceramic secret from local storage so that a user must sign a message again to re-enter the app.
@@ -48,14 +52,14 @@ async setIdxProfile(profile: BasicProfile): Promise<void>
 
 # Recommended hive and ceramic hosts
 
-Here are some recommended hosts
+Here are some recommended hosts for both Hive and Ceramic.
 
 ## Hive
 
-https://api.hive.blog
-https://api.hivekings.com
-https://anyx.io
-https://api.openhive.network
+- https://api.hive.blog
+- https://api.hivekings.com
+- https://anyx.io
+- https://api.openhive.network
 
 ## Ceramic
 
