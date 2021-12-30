@@ -84,7 +84,6 @@ export class HiveKeychainCeramicConnector {
       console.error(`Error authenticating DID!`, err)
     }
 
-    console.log(`did id is ${did.id}`)
     return did
   }
 
@@ -125,8 +124,6 @@ export class HiveKeychainCeramicConnector {
     const accountInfo = (await this.DHive.database.getAccounts([username]))[0] as any
     const json_metadata = JSON.parse(accountInfo.posting_json_metadata)
 
-    console.log(`json_metadata: `, json_metadata)
-
     if (!json_metadata?.did) {
       json_metadata.did = did.id
       window.hive_keychain?.requestBroadcast(
@@ -142,7 +139,7 @@ export class HiveKeychainCeramicConnector {
           ],
         ],
         'Posting',
-        (err) => console.log(err),
+        (err) => console.error(err),
       )
     }
 
