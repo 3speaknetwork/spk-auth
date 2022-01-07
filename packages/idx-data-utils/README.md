@@ -1,6 +1,6 @@
 # @spknetwork/idx-data-utils
 
-A convenience library for common interactions with user data on ceramic using [glaze](https://developers.ceramic.network/tools/glaze/overview/).
+A convenience library for common interactions with user data on ceramic using the IDX protocol over [glaze](https://developers.ceramic.network/tools/glaze/overview/).
 
 # Usage
 
