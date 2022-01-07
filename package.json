@@ -5,6 +5,7 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "build": "pnpm recursive run build",
+    "test": "pnpm recursive run test",
     "clean:dist": "pnpm recursive exec -- rm -rf dist",
     "clean:node_modules": "pnpm recursive exec -- rm -rf node_modules; rm shrinkwrap.yaml; rm -rf node_modules",
     "clean:all": "pnpm run clean:dist && pnpm run clean:node_modules"
