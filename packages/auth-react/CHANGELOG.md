@@ -1,5 +1,13 @@
 # @spknetwork/auth-react
 
+## 0.0.6
+
+### Patch Changes
+
+- Add IDX data utils to Hive connector
+- Updated dependencies
+  - @spknetwork/hive-keychain-ceramic@0.0.6
+
 ## 0.0.5
 
 ### Patch Changes

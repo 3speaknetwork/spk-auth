@@ -1,6 +1,6 @@
 {
   "name": "@spknetwork/auth-react",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,7 +15,6 @@
   },
   "scripts": {
     "clean": "rimraf dist",
-    "preinstall": "npx only-allow pnpm",
     "prepublish": "npm run clean && npm run build",
     "build": "tsc",
     "build:watch": "tsc -w",

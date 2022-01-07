@@ -1,8 +1,8 @@
 import ThreeIdProvider from '3id-did-provider'
 import ThreeIdResolver from '@ceramicnetwork/3id-did-resolver'
 import { CeramicClient } from '@ceramicnetwork/http-client'
-import { BasicProfile } from '@ceramicstudio/idx-constants'
 import { Client as DHiveClient } from '@hiveio/dhive'
+import { IdxDataService, BasicProfile } from '@spknetwork/idx-data-utils'
 import { hash } from '@stablelib/sha256'
 import { DID } from 'dids'
 import { DEFAULT_HIVE_SIGNING_MESSAGE, HiveSignResponse } from '.'
@@ -21,6 +21,7 @@ export class HiveKeychainCeramicConnector {
   provider: ThreeIdProvider | undefined
   DHive: DHiveClient
   ceramic: CeramicClient
+  idxUtils: IdxDataService
   loggedIn = false
 
   constructor(
@@ -29,6 +30,7 @@ export class HiveKeychainCeramicConnector {
   ) {
     this.DHive = new DHiveClient(hiveHosts)
     this.ceramic = new CeramicClient(ceramicHost)
+    this.idxUtils = new IdxDataService(this.ceramic)
   }
 
   get cachedSecret(): Uint8Array | null {
@@ -44,10 +46,12 @@ export class HiveKeychainCeramicConnector {
       // First try to use secret kept in local storage
       const did = await this.createAndLoginDid(this.cachedSecret, this.ceramic)
       await this.ceramic.setDID(did)
+      await this.idxUtils.init()
     } else {
       // Otherwise get secret from hive keychain
       const did = await this.loginWithKeychain(this.ceramic)
       await this.ceramic.setDID(did)
+      await this.idxUtils.init()
     }
 
     this.loggedIn = true
