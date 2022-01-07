@@ -1,5 +1,13 @@
 # @spknetwork/hive-keychain-ceramic
 
+## 0.0.6
+
+### Patch Changes
+
+- Add IDX data utils to Hive connector
+- Updated dependencies
+  - @spknetwork/idx-data-utils@0.0.3
+
 ## 0.0.5
 
 ### Patch Changes

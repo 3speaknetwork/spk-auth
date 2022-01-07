@@ -34,6 +34,10 @@ Remove the ceramic secret from local storage so that a user must sign a message 
 logout(): void
 ```
 
+# Accessing IDX data utils
+
+An instance of [IdxDataService](https://www.npmjs.com/package/@spknetwork/idx-data-utils) is provided in connector property [connector.idxUtils] for convenient access to user data over the IDX protocol.
+
 # Recommended hive and ceramic hosts
 
 Here are some recommended hosts for both Hive and Ceramic.

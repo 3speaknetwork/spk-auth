@@ -1,6 +1,6 @@
 {
   "name": "@spknetwork/idx-data-utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A convenience library for common interactions with user data on ceramic using the IDX protocol over glaze.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,7 +16,6 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "npm run clean && tsc --project ./tsconfig.release.json",
-    "preinstall": "npx only-allow pnpm",
     "prepublish": "npm run clean && npm run build",
     "lint:fix": "eslint --fix \"src/**/*.{ts,tsx}\"",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
