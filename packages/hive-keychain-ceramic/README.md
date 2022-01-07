@@ -34,22 +34,6 @@ Remove the ceramic secret from local storage so that a user must sign a message 
 logout(): void
 ```
 
-## Get basic profile
-
-Retrieve basic profile information from IDX for the logged in user.
-
-```ts
-async getIdxProfile(): Promise<BasicProfile>
-```
-
-## Write basic profile
-
-Write basic profile information to IDX for the logged in user.
-
-```ts
-async setIdxProfile(profile: BasicProfile): Promise<void>
-```
-
 # Recommended hive and ceramic hosts
 
 Here are some recommended hosts for both Hive and Ceramic.

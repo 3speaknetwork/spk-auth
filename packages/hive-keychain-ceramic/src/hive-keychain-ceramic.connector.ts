@@ -1,7 +1,6 @@
 import ThreeIdProvider from '3id-did-provider'
 import ThreeIdResolver from '@ceramicnetwork/3id-did-resolver'
 import { CeramicClient } from '@ceramicnetwork/http-client'
-import { IDX } from '@ceramicstudio/idx'
 import { BasicProfile } from '@ceramicstudio/idx-constants'
 import { Client as DHiveClient } from '@hiveio/dhive'
 import { hash } from '@stablelib/sha256'
@@ -22,7 +21,6 @@ export class HiveKeychainCeramicConnector {
   provider: ThreeIdProvider | undefined
   DHive: DHiveClient
   ceramic: CeramicClient
-  idx: IDX
   loggedIn = false
 
   constructor(
@@ -31,7 +29,6 @@ export class HiveKeychainCeramicConnector {
   ) {
     this.DHive = new DHiveClient(hiveHosts)
     this.ceramic = new CeramicClient(ceramicHost)
-    this.idx = new IDX({ ceramic: this.ceramic, autopin: true })
   }
 
   get cachedSecret(): Uint8Array | null {
@@ -151,25 +148,17 @@ export class HiveKeychainCeramicConnector {
     localStorage.removeItem('hive.ceramic.secret')
   }
 
+  /**
+   * @deprecated - This function is no longer supported - use @spknetwork/idx-data-utils instead
+   */
   public async getIdxProfile(): Promise<BasicProfile> {
-    if (!this.idx) {
-      throw new Error(`idx not initialized...cannot fetch basic profile`)
-    }
-    try {
-      return (await this.idx.get('basicProfile')) as BasicProfile
-    } catch (err) {
-      throw new Error(`Error getting basic profile from IDX! ${err.message}`)
-    }
+    throw new Error(`getIdxProfile function deprecated`)
   }
 
+  /**
+   * @deprecated - This function is no longer supported - use @spknetwork/idx-data-utils instead
+   */
   public async setIdxProfile(profile: BasicProfile) {
-    if (!this.idx) {
-      throw new Error(`idx not initialized...cannot set basic profile`)
-    }
-    try {
-      await this.idx.set('basicProfile', profile)
-    } catch (err) {
-      throw new Error(`Error setting basic profile in IDX! ${err.message}`)
-    }
+    throw new Error(`setIdxProfile function deprecated`)
   }
 }

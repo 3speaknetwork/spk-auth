@@ -1,11 +1,10 @@
 # @spknetwork/auth-react
 
-## 0.0.5
+## 0.0.1
 
 ### Patch Changes
 
-- Updated dependencies
-  - @spknetwork/hive-keychain-ceramic@0.0.5
+- Add IDX data utils package and deprecate IDX profile functions in hive-keychain-ceramic
 
 ## 0.0.2
 

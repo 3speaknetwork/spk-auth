@@ -27,6 +27,7 @@ This project is a monorepo using two tools:
 
 
 ```sh
+pnpm changeset # select changes and major, minor, or patch version increments
 pnpm changeset version
 pnpm install
 pnpm publish -r    
