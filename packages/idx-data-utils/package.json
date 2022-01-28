@@ -1,6 +1,6 @@
 {
   "name": "@spknetwork/idx-data-utils",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "A convenience library for common interactions with user data on ceramic using the IDX protocol over glaze.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
