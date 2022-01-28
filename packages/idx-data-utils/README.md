@@ -21,6 +21,12 @@ await service.writeOwnProfile(profile)
 const profile = await service.getUserProfile(did)
 ```
 
+## Helper functions
+
+```ts
+IdxDataService.isInitialized: () => boolean // will return true if the service instance has been initialized
+```
+
 ## Note on changes to the IDX protocol and tools
 
 See this recent blog post from ceramic on `datamodels` and `glaze`.

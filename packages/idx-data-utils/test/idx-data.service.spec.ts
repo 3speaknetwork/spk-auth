@@ -40,7 +40,10 @@ describe('idx data service should operate: ', () => {
   it("should get others' basic profile", async () => {
     const ceramicAcct2 = await getTestCeramicClient(CERAMIC_HOST)
     const service2 = new IdxDataService(ceramicAcct2)
+    expect(service2.isInitialized).toBeFalsy()
+
     await service2.init()
+    expect(service2.isInitialized).toBeTruthy()
     const profile: BasicProfile = {
       name: 'user2 name',
     }
