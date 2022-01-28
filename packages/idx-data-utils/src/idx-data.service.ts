@@ -33,6 +33,10 @@ export class IdxDataService {
     this.initialized = true
   }
 
+  get isInitialized() {
+    return this.initialized
+  }
+
   private throwIfNotInit() {
     if (!this.initialized) {
       throw new Error(`IdxDataService is not initialized!  Must call async function .init()`)
