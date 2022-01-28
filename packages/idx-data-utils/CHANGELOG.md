@@ -1,5 +1,11 @@
 # @spknetwork/auth-react
 
+## 0.1.0
+
+### Minor Changes
+
+- Add utility function isInitialized to IdxDataUtils service
+
 ## 0.0.3
 
 ### Patch Changes
